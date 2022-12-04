@@ -24,5 +24,8 @@
   "devDependencies": {
     "parcel": "^2.8.0",
     "process": "^0.11.10"
-  }
+  },
+  "browserlist":[
+    "> 0.2% and not dead"
+  ]
 }
