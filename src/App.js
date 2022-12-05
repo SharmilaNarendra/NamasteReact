@@ -42,4 +42,4 @@ const HeaderComponent = () => {
 
 /** Accessing DOM to render react element*/
 const reactRoot = ReactDOM.createRoot(document.getElementById("react-root"));
-reactRoot.render(HeaderComponent);
+reactRoot.render(<HeaderComponent/>);
