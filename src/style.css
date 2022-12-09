@@ -1,3 +1,8 @@
+.app-body{
+    background-color: hsl(283, 48%, 83%);
+}
+
+/** styles for header component */
 .header{
     background-image: linear-gradient(to right,rgb(84, 17, 129) , rgb(208, 92, 234));
     color: white;
@@ -6,22 +11,26 @@
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 80px;
+    height: 90px;
+    z-index: 1000;
     display: flex;
     flex-direction: row;
 }
 .title{
-    margin: 19px;
+    flex-basis:20px;
 }
 .user-icon{
     height: 50px;
     width: 50px;
-    margin: 15px 38px 15px auto;;
-    margin-left: auto;
+    padding: 0px 40px 0px 40px;
+    align-self: center;
 }
+
+/** styles for search bar */
 .search-bar{
-    transform: translate(920px,16px);
+    align-self: center;
     display: flex;
+    margin-left: auto;
 }
 input[type="search"] {
     border: none;
@@ -43,4 +52,38 @@ button[type="submit"] {
     transform: translate(0px,4px);
     color: #67078e;
 }
-  
+
+/** styles for card component*/
+#card{
+    width: 700px;
+    height: 225px;
+    border: 1px  #000;
+    border-radius: 2em;
+    padding: 2px;
+    display:flex;
+    flex-direction:row;
+    gap:30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#card:hover{
+    box-shadow: hsl(155, 75%, 43%) 10px 10px 25px 0px;
+    width: 705px;
+    height: 230px;
+}
+#card > img {
+    height: 215px;
+    width: 200px;
+    float: left;
+    border-radius: 2em;
+    padding: 5px;
+}
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 40px;  
+    padding: 130px 120px;
+}
+.cardContainer > div {
+    background-color: rgb(255, 255, 255);
+}
+
