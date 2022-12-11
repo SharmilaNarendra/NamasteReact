@@ -1,6 +1,6 @@
 /** display user information in a card */
-const CardComponent = ({members}) =>{
-    const {img,name,city,company,designation} = members;
+const CardComponent = ({members:{img,name,city,company,designation}}) =>{
+
     return (
        <div id="card" className="card">
            <img src={img}></img>
