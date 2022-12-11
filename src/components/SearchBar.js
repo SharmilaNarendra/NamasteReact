@@ -1,16 +1,5 @@
 import {useState} from "react";
-import data from "../utils/data.json"
-
-
-/** search functionality to search memeber name and designation */
-const SearchMembers = (searchText) =>{
-    return data?.filter(
-        (mem)=>(mem.name?.toLowerCase().includes(searchText.toLowerCase())) ||
-               (mem.designation?.toLowerCase().includes(searchText.toLowerCase())) ||
-               (mem.company?.toLowerCase().includes(searchText.toLowerCase())) ||
-               (mem.city?.toLowerCase().includes(searchText.toLowerCase()))
-    )
-}
+import searchMembers from "../utils/shared_functions/searchMembers"
 
 /** search bar component */
 const SearchBar = ({setFiteredMemebers}) =>{
@@ -18,7 +7,7 @@ const SearchBar = ({setFiteredMemebers}) =>{
     return(
         <form className="search-bar" onSubmit={(e)=>{
                 e.preventDefault();
-                const filteredText = SearchMembers(searchText);
+                const filteredText = searchMembers(searchText);
                 setFiteredMemebers(filteredText);
             }}>
 

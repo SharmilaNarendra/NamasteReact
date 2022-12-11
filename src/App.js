@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+
 import logo from "../images/The-Incredible-Hulk-2-icon.png"
 import userIcon from "../images/Avengers-Hulk-icon.png"
-import data from "./utils/data.json"
-import CardComponent from "./components/CardComponent";
+import data from "./utils/constants/data.json"
+
 import SearchBar from "./components/SearchBar"
-import title from "./utils/Constants";
-
-
+import title from "./utils/constants/Constants";
+import CardContainer from "./containers/CardContainer"
 
 /** header component*/
 const HeaderComponent = ({setFiteredMemebers}) => {
@@ -21,20 +21,11 @@ const HeaderComponent = ({setFiteredMemebers}) => {
     );
 };
 
-const CardContainer = ({filteredMemebers}) => {
-    const cards = filteredMemebers?.map((member) =>{
-        return  <CardComponent members={member} key={member.id}/>
-    })
-   return cards;
-}
-
 /** body component */
 const BodyComponent = ({filteredMemebers})=>{
-   return( 
-     <div className="cardContainer">
-     <CardContainer filteredMemebers={filteredMemebers}/>
-     </div>
-    )
+ return(
+    <CardContainer filteredMemebers={filteredMemebers}/>
+ )
 }
 
 /** layout of the application */
