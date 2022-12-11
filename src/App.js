@@ -1,45 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
+
 import logo from "../images/The-Incredible-Hulk-2-icon.png"
 import userIcon from "../images/Avengers-Hulk-icon.png"
+import data from "./utils/constants/data.json"
 
-/**
- * Header with nested react create elememt without using JSX
- *
- * const reactHeading = React.createElement("div", { className: "title p-3" }, [
- * React.createElement("h2", {}, "Namaste React Bootcamp"),
- * React.createElement("h3", {}, "HUSTLERS")]);
- */
+import SearchBar from "./components/SearchBar"
+import title from "./utils/constants/Constants";
+import CardContainer from "./containers/CardContainer"
 
-/**
- * Header by using react functional component
- */
-
-const TitleComponent = () => {
-  return <h1 className="title">HUSTLERS</h1>;
-};
-
-const SearchBar = () =>{
+/** header component*/
+const HeaderComponent = ({setFiteredMemebers}) => {
     return(
-        <form className="search-bar">
-            <input className="input-search" type="search" placeholder="Search the Hustler.." />
-            <button type="submit"><i className="fa fa-search fa-2x"></i></button>
-        </form>
-    )
-};
-
-/** Header */
-const HeaderComponent = () => {
-    return(
-        <div className="header">
+        <div class="header">
          <img src={logo}/>
-         <TitleComponent/>
-         <SearchBar/>
+         <h1 className="title">{title}</h1>
+         <SearchBar setFiteredMemebers={setFiteredMemebers}/>
          <img className="user-icon" src={userIcon}/>
         </div>
-    )
+    );
 };
 
-/** Accessing DOM to render react element*/
+/** body component */
+const BodyComponent = ({filteredMemebers})=>{
+ return(
+    <CardContainer filteredMemebers={filteredMemebers}/>
+ )
+}
+
+/** layout of the application */
+const AppLayout = () =>{
+    const [filteredMemebers, setFiteredMemebers] = useState(data);
+    return (
+        <>
+        <HeaderComponent setFiteredMemebers={setFiteredMemebers}/>
+        <BodyComponent filteredMemebers={filteredMemebers}/>
+        </>
+    )
+}
+    
+/** accessing DOM to render react element */
 const reactRoot = ReactDOM.createRoot(document.getElementById("react-root"));
-reactRoot.render(<HeaderComponent/>);
+reactRoot.render(<AppLayout/>);
+

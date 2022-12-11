@@ -1,0 +1,80 @@
+[{
+    "id": "dnbcjwbkvb",
+    "name": "Sharmila",
+    "city": "Bangalore",
+    "company": "Morgan Stanley",
+    "designation":"Technical Consultant",
+    "img" : "https://media-exp1.licdn.com/dms/image/C4E03AQGij2dmDzAbHg/profile-displayphoto-shrink_400_400/0/1598029169103?e=1675900800&v=beta&t=9enU3PuGxb-SrEjC7Tm0oyvY22WF6sMPxHDVWCxuAq8"
+  },
+  {
+    "id": "sbdhjwkfkhw",
+    "name": "Pushkar",
+    "city": "Gurgaon",
+    "company": "NexGen Iot Solutions",
+    "designation":"Frontend Developer",
+    "img" : "https://media-exp1.licdn.com/dms/image/C4D03AQGbGCw8a5lH_Q/profile-displayphoto-shrink_200_200/0/1648835306859?e=1675296000&v=beta&t=zi2-WPLit9of6XwkQONztgPMcknEkbr5YvGnd2AGGD8"
+  },
+  {
+    "id": "jsdhcfkwjhgef",
+    "name": "Ravi",
+    "city": "Bangalore",
+    "company": "Cognizant",
+    "designation":"Senior Consultant",
+    "img" : "https://media-exp1.licdn.com/dms/image/C5103AQFoo3dsYDJjIw/profile-displayphoto-shrink_800_800/0/1551502183699?e=1675296000&v=beta&t=vn_UCprymlu9QdzxDh718f8YleOOPrFnD3iGnNed2Lg"
+  },
+  {
+    "id": "jdhkwjegfjhwegf",
+    "name": "Neha Bhargava",
+    "city": "Kuala Lumpur",
+    "company": "SoftwareAG",
+    "designation":"Web Developer",
+    "img" : "https://media-exp1.licdn.com/dms/image/C4D03AQGraZoRwLtoLA/profile-displayphoto-shrink_400_400/0/1655176322070?e=1675900800&v=beta&t=gGEXJGHmCi22j6-6IfeRM630cuKSXZQqrVjpRBDA4tY"
+  },
+  {
+    "id": "ksjgdhwegdfkwhe",
+    "name": "Sandeep Mukherjee",
+    "city": "Anisabad, Patna",
+    "company": "Technotree",
+    "designation":"Frontend Developer",
+    "img" : "https://media-exp1.licdn.com/dms/image/C4E03AQEApcCm_A5XOg/profile-displayphoto-shrink_400_400/0/1626199901145?e=1675900800&v=beta&t=duIMrDSGfvFPCNerTiNhv4ntk4rFwXuySU_gFGtAjXQ"
+  },
+  {
+    "id": "snbdnbwwehjdfb",
+    "name": "Shivam Damre",
+    "city": "Amravati",
+    "company": "Truscholar",
+    "designation":"Frontend Developer",
+    "img" : "https://media-exp1.licdn.com/dms/image/D4E03AQHrJBvbjTr2IQ/profile-displayphoto-shrink_400_400/0/1663224220416?e=1675900800&v=beta&t=10f_bqB7F8PaKkNK8KcB2BAroBX356L55B_z9vi2VU8"
+  },
+  {
+    "id": "khdgjhwgdkjHSKJhw",
+    "name": "sushil",
+    "city": "Malegaon",
+    "company": "PNQ Technologies",
+    "designation":"Frontend Developer",
+    "img" : "https://media-exp1.licdn.com/dms/image/D4D35AQEM0z75NrPHIg/profile-framedphoto-shrink_400_400/0/1670207979816?e=1671195600&v=beta&t=IsLJmYCcfEgYcyL4WWQjUE0-oo7HcD6cbPD1o33e5sQ"
+  },
+  {
+    "id": "kjwdhwjkd",
+    "name": "Aryan Das",
+    "city": "Bhubaneswar",
+    "company": "VIT Vellore",
+    "designation":"Student",
+    "img" : "https://media-exp1.licdn.com/dms/image/D4D03AQHGjY7J5kaTww/profile-displayphoto-shrink_400_400/0/1670371489646?e=1675900800&v=beta&t=NOZGZg7u2fnPWkNv1DR2hPUemf-gzx2ZGw1J4OxBPdw"
+  },
+  {
+    "id": "khdgjhwgdoi2wo2iuwjhw",
+    "name": "Sanjeev Kumar",
+    "city": "Meerut",
+    "company": "Infogain",
+    "designation":"Frontend Developer",
+    "img" : "https://media-exp1.licdn.com/dms/image/D4D35AQHs7VRq6rceyg/profile-framedphoto-shrink_100_100/0/1665208784993?e=1671195600&v=beta&t=wl-T_Kz7eemz1E0RUYaSiI6ATd8uU9GjONx5lvQ_eew"
+  },
+  {
+    "id": "djhkwjhj",
+    "name": "Sravan Nemana",
+    "city": "Hyderabad",
+    "company": "Freelancer",
+    "designation": "Freelance Consultant",
+    "img" : "https://media-exp1.licdn.com/dms/image/C5603AQE0MTzFH3tidQ/profile-displayphoto-shrink_400_400/0/1590854405566?e=1675900800&v=beta&t=RNnFT4xxMM6BqFB9Nx5Rugqk4xnHUc3OX248FVLSBG0"
+  }]
