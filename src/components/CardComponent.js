@@ -1,6 +1,6 @@
 /** display user information in a card */
 const CardComponent = ({members}) =>{
-    const {img,name,city,company} = members;
+    const {img,name,city,company,designation} = members;
     return (
        <div id="card" className="card">
            <img src={img}></img>
@@ -8,6 +8,7 @@ const CardComponent = ({members}) =>{
             <h2>{name.toUpperCase()}</h2> 
             <h3>{city}</h3>
             <h3>{company}</h3>
+            <h3>{designation}</h3>
            </div>
        </div>
     )
