@@ -1,0 +1,12 @@
+.cardContainer > a{
+    text-decoration: none;
+}
+.cardContainer{
+    flex-wrap: wrap;
+    gap: 20px 11px;
+    padding: 8px 75px 0 110px;
+    display: flex;
+}
+.cardContainer > div {
+    background-color: #f4e1f9
+}

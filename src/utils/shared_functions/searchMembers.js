@@ -1,12 +1,11 @@
-import data from "../constants/data.json"
+
 
 /** search functionality to search memeber by thier fields */
-const searchMembers = (searchText) =>{
-    return data?.filter(
+const searchMembers = (searchText,listOfTeamMembers) =>{
+    return listOfTeamMembers?.filter(
         (mem)=>(mem.name?.toLowerCase().includes(searchText.toLowerCase())) ||
-               (mem.designation?.toLowerCase().includes(searchText.toLowerCase())) ||
                (mem.company?.toLowerCase().includes(searchText.toLowerCase())) ||
-               (mem.city?.toLowerCase().includes(searchText.toLowerCase()))
+               (mem.location?.toLowerCase().includes(searchText.toLowerCase()))
     )
 }
 

@@ -1,0 +1,23 @@
+.accordion-item{
+    background-color:#e2bfee !important;
+}
+
+.accordion-button{
+    background-color:#c188d4 !important;
+    color: black !important;
+    font-size: 10px;
+}
+.accordion .container {
+    border: none ;
+    background-color: #ffffff00;
+}
+.accordion .container > * {
+    background-color: #ffffff00;
+    padding: 3px 16px 8px 9px;
+    font-size: 17px;
+}
+
+.accordion .container .col {
+    width: 50%;
+    overflow-wrap: break-word;
+}
