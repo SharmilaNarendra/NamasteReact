@@ -50,9 +50,9 @@ return(
                 <Col>Created Date:</Col>
                 <Col>{teamMemberData?.created_at}</Col>
             </Row> : null}
-            {<Row>
+            <Row>
                 <Col><h4>Repositories:</h4></Col>
-            </Row>}
+            </Row>
             <hr />
             <MemberRepoComponent repoUrl={teamMemberData?.repos_url}/>
             </Container>

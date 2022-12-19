@@ -8,7 +8,7 @@ const CardContainer = ({filteredMemebers}) => {
          <CardComponent members={member} key={member.id}/>
       )
     })
-   return((!filteredMemebers.length)? <NoResultsFoundComponenet/> : <div className="cardContainer">{cards}</div>)
+   return(<div className="cardContainer">{cards}</div>)
 }
 
 export default CardContainer;

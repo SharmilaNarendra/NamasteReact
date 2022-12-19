@@ -12,7 +12,7 @@ export async function fetchTeamdata() {
 
 export async function fetchTeamdataById(id) {
   const teamDetails = [];
-  url = "https://api.github.com/users/"+id;
+  const url = "https://api.github.com/users/"+id;
   const teamData = await fetch(url);
   const jsonTeamData = await teamData.json();
   return jsonTeamData;
