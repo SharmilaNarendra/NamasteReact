@@ -11,6 +11,7 @@ const appRouter = createBrowserRouter([
         element: <AppLayout />,
         errorElement:<ErrorComponent/>,
         children:[
+            { index: true, element: <SearchComponent /> },
             {
                 path:"/search",
                 element:<SearchComponent />
@@ -20,8 +21,7 @@ const appRouter = createBrowserRouter([
                 element:<MemberDetail />
             }
         ]
-    },
-    
+    }
 ]); 
 
 export default appRouter;
