@@ -1,0 +1,23 @@
+.search-bar{
+    display: flex;
+    padding: 142px 0 53px 576px;
+}
+input[type="search"] {
+    width: 580px;
+    height: 55px;
+    background: #fff;
+    border: none;
+    border-radius: 35px;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 18px;
+}
+button[type="submit"] {
+    height: 37px;
+    width: 19px;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    transform: translate(0px,4px);
+    color: #67078e;
+}
