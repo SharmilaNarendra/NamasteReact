@@ -1,6 +1,13 @@
+import { useRouteError } from "react-router-dom";
+
 const ErrorComponent = () => {
+  const errorData = useRouteError();
+
   return (
-    <h1> Somthing went wrong !</h1>
+    <div className="no-results">Somthing went wrong !
+    <p>{errorData.statusText || errorData.mesage}</p>
+    </div>
+
   )
 };
 

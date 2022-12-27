@@ -16,8 +16,6 @@
 }
 #card:hover{
     box-shadow: hsl(155, 75%, 43%) 10px 10px 25px 0px;
-    width: 705px;
-    height: 230px;
 }
 #card > img {
     height: 215px;
