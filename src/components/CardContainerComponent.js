@@ -1,12 +1,11 @@
 import CardComponent from "../components/CardComponent";
-import NoResultsFoundComponenet from "../components/NoResultsFoundComponent";
 import  "../components/cardContainerComponent.css";
 
 const CardContainer = ({filteredMemebers}) => {
-    const cards = filteredMemebers?.map((member,index) =>{
+    const cards = filteredMemebers?.map((member) =>{
       return (
          <CardComponent members={member} key={member.id}/>
-      )
+        )
     })
    return(<div className="cardContainer">{cards}</div>)
 }
