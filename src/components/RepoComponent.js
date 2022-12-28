@@ -8,13 +8,13 @@ import Skeleton,{SkeletonTheme} from "react-loading-skeleton";
 import {fetchRepos} from "../services/fetchTeamDetails"
 import "./repoComponent.css"
 
-const RepoComponent=({repoUrl})=> {
+const RepoComponent=({repoUrl,loginId})=> {
     
    const [repoDetails, setRepoDetails] = useState([]);
    const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        repoUrl && fetchRepos(repoUrl).then((repo)=>{
+        repoUrl && fetchRepos(repoUrl,loginId).then((repo)=>{
             setRepoDetails(repo);
             setLoading(true);
         }).catch((err)=>{

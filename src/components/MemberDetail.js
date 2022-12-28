@@ -55,7 +55,7 @@ return(
                 <Col><h4>Repositories:</h4></Col>
             </Row>
             <hr />
-            <MemberRepoComponent repoUrl={teamMemberData?.repos_url}/>
+            <MemberRepoComponent repoUrl={teamMemberData?.repos_url} loginId={teamMemberData?.login}/>
             </Container>
         </div>
     </div>
