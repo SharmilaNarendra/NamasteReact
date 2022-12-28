@@ -1,3 +1,16 @@
+
+
 body{
     background-color: hsl(283, 48%, 83%) !important;
 }
+.middle{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+}
+.no-results{
+    font-size: 40px;
+    font-family: monospace;
+    padding: 150px 0px 0 600px;
+}
+  

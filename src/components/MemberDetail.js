@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import {fetchTeamdataById } from "../services/fetchTeamDetails";
+import {fetchTeamdata} from "../services/fetchTeamDetails";
 import MemberRepoComponent from "./RepoComponent";
 import "./memberDetail.css"
 
@@ -14,8 +14,9 @@ const {id} = useParams();
 const [teamMemberData,setTeamMemberData] = useState({});
 
 useEffect(()=>{
-   fetchTeamdataById(id).then((memeber) => {
-       setTeamMemberData(memeber);
+    fetchTeamdata().then((members) => {
+        const member = members?.find((mem)=>(mem.login === id));
+        member? setTeamMemberData(member) : "";
     });
 },[]);
 
@@ -54,7 +55,7 @@ return(
                 <Col><h4>Repositories:</h4></Col>
             </Row>
             <hr />
-            <MemberRepoComponent repoUrl={teamMemberData?.repos_url}/>
+            <MemberRepoComponent repoUrl={teamMemberData?.repos_url} loginId={teamMemberData?.login}/>
             </Container>
         </div>
     </div>

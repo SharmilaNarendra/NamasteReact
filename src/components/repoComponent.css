@@ -21,3 +21,16 @@
     width: 50%;
     overflow-wrap: break-word;
 }
+.repo-skele-header{
+    height: 67px;
+    width: 944px;
+}
+.repo-skele-body{
+    height: 250px;
+    width: 944px; 
+    margin-bottom: 22px;
+}
+.container .react-loading-skeleton {
+    --base-color: #c8c7c7 !important;
+    --highlight-color: #ebebeb !important;
+}

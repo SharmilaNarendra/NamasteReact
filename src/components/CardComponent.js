@@ -2,10 +2,9 @@ import {Link} from "react-router-dom"
 import data from "../utils/constants/data.json"
 import "../components/cardComponent.css"
 
-
 /** display user information in a card */
 const CardComponent = ({members:{avatar_url,name,location,company,login}}) =>{
-    const memberLink = data.filter((mem)=> (mem.id == login));
+    const memberLink = data?.find((mem)=> (mem.id == login));
     return (
         <>
         <Link to={`/teamMember/${login}`}>
@@ -18,7 +17,7 @@ const CardComponent = ({members:{avatar_url,name,location,company,login}}) =>{
                 </div>
         </div>
         </Link>
-        <a href={memberLink[0].linkedIn} > <i className="fa fa-linkedin-square fa-3x"/></a>
+        <a href={memberLink?.linkedIn}><i className="fa fa-linkedin-square fa-3x"/></a>
        </>
     )
 }

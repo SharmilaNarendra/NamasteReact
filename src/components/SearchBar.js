@@ -1,15 +1,16 @@
 import {useState} from "react";
-import searchMembers from "../utils/shared_functions/searchMembers"
 
+import searchMembers from "../utils/shared_functions/searchMembers"
 import "./searchBar.css"
 
 /** search bar component */
-const SearchBar = ({setFiteredMemebers,listOfTeamMembers}) =>{
+const SearchBar = ({setFiteredMemebers,listOfTeamMembers,setNoResultFound}) =>{
     const [searchText, setSearchText] = useState("");
     return(
         <form className="search-bar" onSubmit={(e)=>{
                 e.preventDefault();
                 const filteredText = searchMembers(searchText,listOfTeamMembers);
+                !filteredText.length?setNoResultFound(true):setNoResultFound(false);
                 setFiteredMemebers(filteredText);
             }}>
 

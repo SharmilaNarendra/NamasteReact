@@ -1,0 +1,26 @@
+.skele-card{
+    width: 700px;
+    height: 225px;
+    border-radius: 2em;
+    padding: 4px 3px 0px 8px;
+    display:flex;
+    flex-direction:row;
+    gap:30px;
+    font-family: cursive; 
+    background-color: rgb(245, 245, 245);
+}
+.skele-container{
+    flex-wrap: wrap;
+    gap: 3px 57px;
+    padding: 8px 75px 0 110px;
+    display: flex;
+}
+.skele-image{
+    width: 180px;
+    height: 209px;
+    border-radius: 2em;
+}
+.skele-container .react-loading-skeleton{
+    --base-color: #dbd9d9 !important;
+    --highlight-color: #ebebeb !important;
+}
