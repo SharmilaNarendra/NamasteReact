@@ -1,5 +1,5 @@
-import CardComponent from "../components/CardComponent";
-import  "../components/cardContainerComponent.css";
+import CardComponent from "../card/CardComponent";
+import  "./cardContainerComponent.css";
 
 const CardContainer = ({filteredMemebers}) => {
     const cards = filteredMemebers?.map((member) =>{

@@ -5,8 +5,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Skeleton,{SkeletonTheme} from "react-loading-skeleton";
 
-import {fetchRepos} from "../services/fetchTeamDetails"
-import "./repoComponent.css"
+import {fetchRepos} from "../../services/fetchTeamDetails"
+import "./gitHubRepoComponent.css"
 
 const RepoComponent=({repoUrl,loginId})=> {
     

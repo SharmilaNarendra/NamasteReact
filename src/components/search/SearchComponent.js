@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import Skeleton from "react-loading-skeleton";
 
-import CardContainer from "./CardContainerComponent";
-import NoResultsFoundComponenet from "./NoResultsFoundComponent";
-import { fetchTeamdata } from "../services/fetchTeamDetails";
-import SearchBar from "./SearchBar";
-import members from "../utils/constants/data.json";
+import CardContainer from "../cardContainer/CardContainerComponent";
+import NoResultsFoundComponenet from "../noresultsFound/NoResultsFoundComponent";
+import { fetchTeamdata } from "../../services/fetchTeamDetails";
+import SearchBar from "../searchBar/SearchBar";
+import members from "../../utils/constants/data.json";
 import "./searchComponent.css";
 
 /** body component */

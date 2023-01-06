@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import AppLayout from "../components/AppLayout"
-import ErrorComponent from "../components/ErrorCommponent";
-import SearchComponent from "../components/SearchComponent";
-import MemberDetail from "../components/MemberDetail";
+import ErrorComponent from "../components/error/ErrorCommponent";
+import SearchComponent from "../components/search/SearchComponent";
+import MemberDetail from "../components/memberDetail/MemberDetail";
 
 const appRouter = createBrowserRouter([
     { 

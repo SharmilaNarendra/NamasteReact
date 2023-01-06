@@ -1,11 +1,12 @@
 import {useState} from "react";
 
-import searchMembers from "../utils/shared_functions/searchMembers"
+import searchMembers from "../../utils/shared_functions/searchMembers"
 import "./searchBar.css"
 
 /** search bar component */
 const SearchBar = ({setFiteredMemebers,listOfTeamMembers,setNoResultFound}) =>{
     const [searchText, setSearchText] = useState("");
+    
     return(
         <form className="search-bar" onSubmit={(e)=>{
                 e.preventDefault();
@@ -26,6 +27,6 @@ const SearchBar = ({setFiteredMemebers,listOfTeamMembers,setNoResultFound}) =>{
             <button type="submit"><i className="fa fa-search fa-2x"></i></button>
         </form>
     )
-};
+}
 
 export default SearchBar;
