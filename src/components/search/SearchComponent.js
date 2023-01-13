@@ -16,36 +16,46 @@ const SearchComponent = () => {
   const [noResultFound, setNoResultFound] = useState(false);
 
   useEffect(() => {
-    fetchTeamdata().then((memebers) => {
-      setListOfTeamMembers(memebers);
-      setFiteredMemebers(memebers);
-      setLoading(true);
-    }).catch((err)=>{
-      console.log(err);
-    }
-    ).finally(()=>{
-      setLoading(false);
-    });
+    fetchTeamdata()
+      .then((memebers) => {
+        setListOfTeamMembers(memebers);
+        setFiteredMemebers(memebers);
+
+        setLoading(true);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
 
-  const rows = members?.map((mem)=>{
-      return (
-        <div key={mem.id} className="skele-card">
-        <Skeleton className="skele-image"/>
-        <Skeleton count={4} width={400} height={35}/>
-        </div>
-      )
-  })
+  const rows = members?.map((mem) => {
+    return (
+      <div key={mem.id} className="skele-card">
+        <Skeleton className="skele-image" />
+        <Skeleton count={4} width={400} height={35} />
+      </div>
+    );
+  });
 
   return (
-      <>
-        <SearchBar setFiteredMemebers={setFiteredMemebers} listOfTeamMembers={listOfTeamMembers} setNoResultFound={setNoResultFound}/>
-        {noResultFound? <NoResultsFoundComponenet/> : loading?
-        <div className="skele-container">{rows}</div>:
-        <CardContainer filteredMemebers={filteredMemebers}/>}
-      </>
+    <>
+      <SearchBar
+        setFiteredMemebers={setFiteredMemebers}
+        listOfTeamMembers={listOfTeamMembers}
+        setNoResultFound={setNoResultFound}
+      />
+      {noResultFound ? (
+        <NoResultsFoundComponenet />
+      ) : loading ? (
+        <div className="skele-container">{rows}</div>
+      ) : (
+        <CardContainer filteredMemebers={filteredMemebers} />
+      )}
+    </>
   );
-    
 };
 
 export default SearchComponent;
