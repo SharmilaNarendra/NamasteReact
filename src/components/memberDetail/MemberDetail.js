@@ -4,8 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-import {fetchTeamdata} from "../services/fetchTeamDetails";
-import MemberRepoComponent from "./RepoComponent";
+import {fetchTeamdata} from "../../services/fetchTeamDetails";
+import MemberRepoComponent from "../gitHubRepo/GitHubRepoComponent";
 import "./memberDetail.css"
 
 
