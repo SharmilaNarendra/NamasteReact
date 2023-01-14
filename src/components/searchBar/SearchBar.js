@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useRef } from "react";
 
 import searchMembers from "../../utils/shared_functions/searchMembers";
 import indianStates from "../../utils/constants/stateCities.json";
@@ -12,9 +12,10 @@ const SearchBar = ({
   setNoResultFound,
 }) => {
   const [searchText, setSearchText] = useState("");
-  const [stateName, setStateName] = useState("");
+  const [stateName, setStateName] = useState("select the state");
   const [cityName, setCityName] = useState("");
-
+  const [filteredList, setFilteredList] = useState(listOfTeamMembers);
+  const ref = useRef(null);
   const cities = useCities(stateName);
 
   return (
@@ -22,7 +23,15 @@ const SearchBar = ({
       className="search-bar"
       onSubmit={(e) => {
         e.preventDefault();
-        const filteredText = searchMembers(searchText, listOfTeamMembers);
+        let filteredText = [];
+        if (
+          ref.current.value == "Select" ||
+          ref.current.value == "-- none --"
+        ) {
+          filteredText = searchMembers(searchText, listOfTeamMembers);
+        } else {
+          filteredText = searchMembers(searchText, filteredList);
+        }
         !filteredText.length ? setNoResultFound(true) : setNoResultFound(false);
         setFiteredMemebers(filteredText);
       }}
@@ -32,7 +41,14 @@ const SearchBar = ({
         <select
           className="state"
           value={stateName}
-          onChange={(e) => setStateName(e.target.value)}
+          onChange={(e) => {
+            setStateName(e.target.value);
+            if (ref.current.value) {
+              setCityName(ref.current.value);
+              setNoResultFound(false);
+              setFiteredMemebers(listOfTeamMembers);
+            }
+          }}
         >
           {Object.keys(indianStates).map((state) => (
             <option value={state} key={state}>
@@ -43,8 +59,25 @@ const SearchBar = ({
         &nbsp;
         <select
           className="city"
+          ref={ref}
           value={cityName}
-          onChange={(e) => setCityName(e.target.value)}
+          onChange={(e) => {
+            setCityName(e.target.value);
+            if (e.target.value == "Select") {
+              setFiteredMemebers(listOfTeamMembers);
+              setNoResultFound(false);
+            } else {
+              const filteredMem = searchMembers(
+                e.target.value,
+                listOfTeamMembers
+              );
+              !filteredMem.length
+                ? setNoResultFound(true)
+                : setNoResultFound(false);
+              setFiteredMemebers(filteredMem);
+              setFilteredList(filteredMem);
+            }
+          }}
         >
           {cities?.map((city) => (
             <option value={city} key={city}>
