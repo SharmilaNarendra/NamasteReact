@@ -28,7 +28,7 @@ const MemberDetail = () => {
       />
       <div className="w-[57%] pt-32">
         <span className="font-mono text-6xl">{teamMemberData?.name}</span>
-        <Container className="border-2 border-purple-700 purple text-2xl">
+        <Container className="border-2 border-purple-700 purple text-2xl pb-3">
           <Row>
             <Col>
               <h4>GitHub details</h4>
