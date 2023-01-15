@@ -1,29 +1,13 @@
-#card{
-    width: 700px;
-    height: 225px;
-    border: 1px  #000;
-    border-radius: 2em;
-    padding: 2px;
-    display:flex;
-    flex-direction:row;
-    gap:30px;
-    font-family: cursive;
-    cursor: pointer;
-    color: #000;
+.fa-linkedin-square {
+  transform: translate(-65px, 161px);
 }
-.fa-linkedin-square{
-   transform: translate(-471px, 157px);
+#card:hover {
+  box-shadow: hsl(155, 75%, 43%) 10px 10px 25px 0px;
 }
-#card:hover{
-    box-shadow: hsl(155, 75%, 43%) 10px 10px 25px 0px;
+
+.w-96 {
+  width: 30rem !important;
 }
-#card > img {
-    height: 215px;
-    width: 200px;
-    float: left;
-    border-radius: 2em;
-    padding: 5px;
-}
-.details > * ,.details{
-    padding: 4px;
+.h-52 {
+  height: 215px;
 }

@@ -20,7 +20,6 @@ const SearchComponent = () => {
       .then((memebers) => {
         setListOfTeamMembers(memebers);
         setFiteredMemebers(memebers);
-
         setLoading(true);
       })
       .catch((err) => {
@@ -33,9 +32,12 @@ const SearchComponent = () => {
 
   const rows = members?.map((mem) => {
     return (
-      <div key={mem.id} className="skele-card">
-        <Skeleton className="skele-image" />
-        <Skeleton count={4} width={400} height={35} />
+      <div
+        key={mem.id}
+        className="skele-card w-96 h-56 p-1 rounded-3xl cursor-pointer flex flex-row gap-8"
+      >
+        <Skeleton className="skele-image srounded-2xl" />
+        <Skeleton count={5} width={230} height={30} />
       </div>
     );
   });
@@ -50,7 +52,7 @@ const SearchComponent = () => {
       {noResultFound ? (
         <NoResultsFoundComponenet />
       ) : loading ? (
-        <div className="skele-container">{rows}</div>
+        <div className="skele-container flex flex-wrap gap-9">{rows}</div>
       ) : (
         <CardContainer filteredMemebers={filteredMemebers} />
       )}

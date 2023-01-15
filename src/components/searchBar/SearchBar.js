@@ -20,7 +20,7 @@ const SearchBar = ({
 
   return (
     <form
-      className="search-bar"
+      className="search-bar flex"
       onSubmit={(e) => {
         e.preventDefault();
         let filteredText = [];
@@ -39,7 +39,7 @@ const SearchBar = ({
       <span className="filter">
         Where in &nbsp;
         <select
-          className="state"
+          className="h-8 w-64 rounded-xl border-none"
           value={stateName}
           onChange={(e) => {
             setStateName(e.target.value);
@@ -58,7 +58,7 @@ const SearchBar = ({
         </select>
         &nbsp;
         <select
-          className="city"
+          className="h-8 w-64 rounded-xl border-none"
           ref={ref}
           value={cityName}
           onChange={(e) => {
@@ -89,14 +89,14 @@ const SearchBar = ({
       </span>
 
       <input
-        className="input-search"
+        className="input-search h-16 border-none rounded-2xl text-xl m-0 px-2 py-4"
         type="search"
         value={searchText}
         placeholder="Search the Hustler..."
         onChange={(e) => setSearchText(e.target.value)}
       ></input>
       <button type="submit">
-        <i className="fa fa-search fa-2x"></i>
+        <i className="fa fa-search fa-2x h-10 w-5 cursor-pointer border-none translate-y-1"></i>
       </button>
     </form>
   );

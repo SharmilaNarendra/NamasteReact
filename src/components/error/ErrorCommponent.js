@@ -5,8 +5,8 @@ const ErrorComponent = () => {
 
   return (
     <>
-      <div className="no-results">Somthing went wrong !</div>
-      <p class="no-results">
+      <div className="text-3xl font-mono p-64 ml-96">Somthing went wrong !</div>
+      <p class="text-1xl font-mono p-10">
         {errorData.statusText ? errorData.statusText : errorData.message}
       </p>
     </>

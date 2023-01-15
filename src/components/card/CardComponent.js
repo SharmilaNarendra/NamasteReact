@@ -1,25 +1,35 @@
-import {Link} from "react-router-dom"
-import data from "../../utils/constants/data.json"
-import "./cardComponent.css"
+import { Link } from "react-router-dom";
+import data from "../../utils/constants/data.json";
+import "./cardComponent.css";
 
 /** display user information in a card */
-const CardComponent = ({members:{avatar_url,name,location,company,login}}) =>{
-    const memberLink = data?.find((mem)=> (mem.id == login));
-    return (
-        <>
-        <Link to={`/teamMember/${login}`}>
-        <div id="card" className="card">
-                <img src={avatar_url}></img>
-                <div className="details">
-                <h2>{name}</h2>
-                <h3>{company}</h3> 
-                <h3>{location}</h3>
-                </div>
+const CardComponent = ({
+  members: { avatar_url, name, location, company, login },
+}) => {
+  const memberLink = data?.find((mem) => mem.id == login);
+  return (
+    <>
+      <Link to={`/teamMember/${login}`}>
+        <div
+          id="card"
+          className="w-96 h-56 p-1 flex flex-row gap-7 rounded-3xl text-2xl font-sans cursor-pointer bg-white text-black"
+        >
+          <img
+            className="h-52 w-52 float-left rounded-3xl p-1"
+            src={avatar_url}
+          ></img>
+          <div className="pt-2">
+            <div className="pt-2">{name}</div>
+            <div className="pt-2">{company}</div>
+            <div className="pt-2">{location}</div>
+          </div>
         </div>
-        </Link>
-        <a href={memberLink?.linkedIn}><i className="fa fa-linkedin-square fa-3x"/></a>
-       </>
-    )
-}
+      </Link>
+      <a href={memberLink?.linkedIn}>
+        <i className="fa fa-linkedin-square fa-3x" />
+      </a>
+    </>
+  );
+};
 
 export default CardComponent;
