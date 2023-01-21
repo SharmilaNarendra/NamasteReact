@@ -41,7 +41,7 @@ const RepoComponent = ({ repoUrl, loginId }) => {
           <Accordion.Header>
             <h5>Repo : {repo.name}</h5>
           </Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Body className="bg-purple-100 dark:bg-slate-300">
             <Container>
               {repo?.full_name ? (
                 <Row>

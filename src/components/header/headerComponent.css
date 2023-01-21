@@ -1,9 +1,7 @@
 .header {
-  background-image: linear-gradient(
-    to right,
-    rgb(84, 17, 129),
-    rgb(208, 92, 234)
-  );
   font-family: monospace;
   z-index: 1000;
+}
+.bg-purple-900 {
+  background-image: rgb(84, 17, 129);
 }

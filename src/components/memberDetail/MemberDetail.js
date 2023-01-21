@@ -27,8 +27,10 @@ const MemberDetail = () => {
         src={teamMemberData.avatar_url}
       />
       <div className="w-[57%] pt-32">
-        <span className="font-mono text-6xl">{teamMemberData?.name}</span>
-        <Container className="border-2 border-purple-700 purple text-2xl pb-3">
+        <span className="font-mono text-6xl dark:text-white">
+          {teamMemberData?.name}
+        </span>
+        <Container className="border-2 border-purple-700 bg-purple-100 text-2xl pb-3 dark:bg-slate-300 dark:border-black">
           <Row>
             <Col>
               <h4>GitHub details</h4>
