@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: hsl(283, 48%, 83%) !important;
-}
 .purple {
-  background-color: #f4e1f9;
+  background-color: #ebcef3;
 }

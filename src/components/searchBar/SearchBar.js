@@ -37,9 +37,9 @@ const SearchBar = ({
       }}
     >
       <span className="filter">
-        Where in &nbsp;
+        <span className="text-slate-600 dark:text-white"> Where in &nbsp;</span>
         <select
-          className="h-8 w-64 rounded-xl border-none"
+          className="h-8 w-64 rounded-xl border-none  bg-violet-50 dark:bg-slate-300"
           value={stateName}
           onChange={(e) => {
             setStateName(e.target.value);
@@ -58,7 +58,7 @@ const SearchBar = ({
         </select>
         &nbsp;
         <select
-          className="h-8 w-64 rounded-xl border-none"
+          className="h-8 w-64 rounded-xl border-none  bg-violet-50 dark:bg-slate-300"
           ref={ref}
           value={cityName}
           onChange={(e) => {
@@ -85,18 +85,20 @@ const SearchBar = ({
             </option>
           ))}
         </select>
-        &nbsp; do you wish to search?
+        <span className="text-slate-600 dark:text-white">
+          &nbsp; do you wish to search?
+        </span>
       </span>
 
       <input
-        className="input-search h-16 border-none rounded-2xl text-xl m-0 px-2 py-4"
+        className="input-search h-16 border-none rounded-2xl text-xl m-0 px-2 py-4 bg-violet-50 dark:bg-slate-300"
         type="search"
         value={searchText}
         placeholder="Search the Hustler..."
         onChange={(e) => setSearchText(e.target.value)}
       ></input>
       <button type="submit">
-        <i className="fa fa-search fa-2x h-10 w-5 cursor-pointer border-none translate-y-1"></i>
+        <i className="fa fa-search fa-2x h-10 w-5 cursor-pointer border-none translate-y-1 p-1 text-purple-900 dark:text-white"></i>
       </button>
     </form>
   );

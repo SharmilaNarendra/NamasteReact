@@ -2,6 +2,7 @@
   padding: 156px 0 53px 576px;
 }
 input[type="search"] {
+  color: rgb(0, 0, 0) !important;
   width: 680px;
 }
 button[type="submit"] {
