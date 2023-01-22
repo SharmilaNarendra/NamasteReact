@@ -15,7 +15,10 @@ module.exports = {
 
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
-
+  moduleNameMapper: {
+    "\\.(png|svg|pdf|jpg|jpeg)$": "<rootDir>/__mocks__/fileMock.js",
+    "\\.(css|less|scss)$": "identity-obj-proxy",
+  },
   // Indicates whether the coverage information should be collected while executing the test
   collectCoverage: true,
 
