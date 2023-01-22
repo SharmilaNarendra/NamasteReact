@@ -27,7 +27,6 @@ const HeaderComponent = () => {
         className="h-12 w-12 self-center cursor-pointer ml-[60%]"
         src={themeIcon}
         onClick={() => {
-          const root = window.document.documentElement;
           if (theme == "light") {
             setTheme("dark");
           } else {
