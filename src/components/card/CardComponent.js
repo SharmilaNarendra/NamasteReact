@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import data from "../../utils/constants/data.json";
-import "./cardComponent.css";
+import "../card/cardComponent.css";
 
 /** display user information in a card */
 const CardComponent = ({

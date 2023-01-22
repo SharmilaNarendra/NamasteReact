@@ -1,4 +1,4 @@
-import logo from "../../../images/The-Incredible-Hulk-2-icon.png";
+import { logo } from "../../../images/The-Incredible-Hulk-2-icon.png";
 import title from "../../utils/constants/Constants";
 import userIcon from "../../../images/Avengers-Hulk-icon.png";
 import themeIcon from "../../../images/theme.png";

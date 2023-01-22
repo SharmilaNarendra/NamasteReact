@@ -6,7 +6,7 @@ import NoResultsFoundComponenet from "../noresultsFound/NoResultsFoundComponent"
 import { fetchTeamdata } from "../../services/fetchTeamDetails";
 import SearchBar from "../searchBar/SearchBar";
 import members from "../../utils/constants/data.json";
-import "./searchComponent.css";
+import "../search/SearchComponent.css";
 
 /** body component */
 const SearchComponent = () => {
