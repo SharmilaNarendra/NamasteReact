@@ -1,6 +1,7 @@
 import { render } from "@testing-library/react";
-import Header from "../header/HeaderComponent";
+import Header from "../Header/HeaderComponent";
 
-test("test loading header", () => {
-  render(<Header />);
+test("test loading header", async () => {
+  const header = render(<Header />);
+  expect(header).toMatchSnapshot();
 });
