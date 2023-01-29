@@ -7,7 +7,6 @@ const useCities = (stateName) => {
 
   useEffect(() => {
     const cities = indianStates[stateName];
-    console.log(cities);
     setCityList(cities);
   }, [stateName]);
 
