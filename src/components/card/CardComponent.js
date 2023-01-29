@@ -21,7 +21,7 @@ class CardComponent extends React.Component {
     console.log("CardComponent render");
     return (
       <>
-        <Link to={`/teamMember/${this.props.members.login}`}>
+        <Link to={`/hustlers/teamMember/${this.props.members.login}`}>
           <div
             id="card"
             className="w-96 h-56 p-1 flex flex-row gap-7 rounded-3xl text-2xl font-sans cursor-pointer bg-purple-100 dark:bg-slate-300 text-slate-800 "

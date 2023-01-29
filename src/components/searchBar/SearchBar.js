@@ -39,7 +39,7 @@ const SearchBar = ({
       <span className="filter">
         <span className="text-slate-600 dark:text-white"> Where in &nbsp;</span>
         <select
-          className="h-8 w-64 rounded-xl border-none  bg-violet-50 dark:bg-slate-300"
+          className="h-8 w-64 p-1 rounded-xl border-none  bg-violet-50 dark:bg-slate-300"
           value={stateName}
           onChange={(e) => {
             setStateName(e.target.value);
@@ -58,7 +58,7 @@ const SearchBar = ({
         </select>
         &nbsp;
         <select
-          className="h-8 w-64 rounded-xl border-none  bg-violet-50 dark:bg-slate-300"
+          className="h-8 w-64 p-1 rounded-xl border-none  bg-violet-50 dark:bg-slate-300"
           ref={ref}
           value={cityName}
           onChange={(e) => {

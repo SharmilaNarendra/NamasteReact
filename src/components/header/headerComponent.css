@@ -2,6 +2,13 @@
   font-family: monospace;
   z-index: 1000;
 }
-.bg-purple-900 {
-  background-image: rgb(84, 17, 129);
+
+.dropdown-toggle::after {
+  display: none !important;
+}
+.profile {
+  background-color: rgb(245 243 255) !important;
+}
+.dropdown > button {
+  border: none !important;
 }
